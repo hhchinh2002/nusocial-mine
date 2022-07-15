@@ -16,8 +16,9 @@ const db = mysql.createConnection({
 const userRoute = require('./routes/User')
 app.use('', userRoute);
 const postingRoute = require('./routes/Posting')
-app.use('', postingRoute);
+app.use('', postingRoute)
 
-app.listen(process.env.PORT | PORT, (req, res) => {
+const PORT = 3001;
+app.listen(process.env.PORT || PORT, (req, res) => {
     console.log("Server is running on port ${PORT}");
 });
