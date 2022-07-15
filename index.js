@@ -18,6 +18,6 @@ app.use('', userRoute);
 const postingRoute = require('./routes/Posting')
 app.use('', postingRoute);
 
-app.listen(3001, (req, res) => {
-    console.log("Server is running...");
+app.listen(process.env.PORT | PORT, (req, res) => {
+    console.log("Server is running on port ${PORT}");
 });
