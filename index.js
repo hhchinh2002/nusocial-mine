@@ -5,6 +5,7 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 const db = mysql.createConnection({
     host: "us-cdbr-east-06.cleardb.net",
@@ -19,6 +20,10 @@ const postingRoute = require('./routes/Posting')
 app.use('', postingRoute)
 
 const PORT = process.env.PORT || 3001;
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  });
 
 app.listen(PORT, (req, res) => {
     console.log("Server is running on port " + PORT);
