@@ -1,0 +1,21 @@
+.LeftBarRow {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.LeftBarRow:hover {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.LeftBarRow > h4 {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.LeftBarRow > .MuiSvgIcon-root {
+    font-size: xx-large;
+    color: #003D7C;
+}
