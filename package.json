@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm run build"
   },
   "dependencies": {
     "cloudinary": "^1.30.0",
