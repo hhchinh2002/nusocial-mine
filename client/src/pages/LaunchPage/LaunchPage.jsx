@@ -54,10 +54,10 @@ export const LaunchPage = () => {
   return ( 
     <div className="container" ref={container}>
       <div className="formContainer">
-        <div class="loginRegister">
+        <div className="loginRegister">
           <div className="form loginForm">
-            <h2 class="title">Login</h2>
-            <div class="inputField">
+            <h2 className="title">Login</h2>
+            <div className="inputField">
               <PersonIcon className="icon"/>
               <input 
                 type="text" 
@@ -65,7 +65,7 @@ export const LaunchPage = () => {
                 onChange={(event) => {setLogUsername(event.target.value);}}
               />
             </div>
-            <div class="inputField">
+            <div className="inputField">
               <HttpsIcon className="icon"/>
               <input
                 type="password"
@@ -73,43 +73,43 @@ export const LaunchPage = () => {
                 onChange={(event) => {setLogPassword(event.target.value);}}
               />
             </div>
-            <input type="submit" value="Login" class="btn solid" onClick={login}/>
+            <input type="submit" value="Login" className="btn solid" onClick={login}/>
             {errorMessage}
-            <p class="guest">Or continue as an anonymous guest</p>
+            <p className="guest">Or continue as an anonymous guest</p>
           </div>
           <div className="form registerForm">
-            <h2 class="title">Register</h2>
-            <div class="inputField">
+            <h2 className="title">Register</h2>
+            <div className="inputField">
               <PersonIcon className="icon"/>
               <input 
                 type="text" 
                 placeholder="Username" 
                 onChange={(event) => (setRegUsername(event.target.value))}/>
             </div>
-            <div class="inputField">
+            <div className="inputField">
               <EmailIcon className="icon"/>
               <input 
                 type="email" 
                 placeholder="Email" 
                 onChange={(event) => (setRegEmail(event.target.value))}/>
             </div>
-            <div class="inputField">
+            <div className="inputField">
               <HttpsIcon className="icon"/>
               <input 
                 type="password" 
                 placeholder="Password" 
                 onChange={(event) => (setRegPassword(event.target.value))}/>
             </div>
-            <input type="submit" class="btn" onClick={register}/>
+            <input type="submit" className="btn" onClick={register}/>
             
-            <p class="guest">Or continue as an anonymous guest</p>
+            <p className="guest">Or continue as an anonymous guest</p>
           </div>
         </div>
       </div>
 
-      <div class="panelsContainer">
-        <div class="panel leftPanel">
-          <div class="content">
+      <div className="panelsContainer">
+        <div className="panel leftPanel">
+          <div className="content">
             <h3>What is NUSocial?</h3>
             <p>
               NUSocial is an all-in-one social media platform designed for
@@ -121,23 +121,23 @@ export const LaunchPage = () => {
             <p>
               Register an account to join with NUSocial community.
             </p>
-            <button onClick={handleSign} class="btn transparent">
+            <button onClick={handleSign} className="btn transparent">
               Register
             </button>
           </div>
-          <Lpimglogin class="image" alt="" />
+          <Lpimglogin className="image" alt="" />
         </div>
-        <div class="panel rightPanel">
-          <div class="content">
+        <div className="panel rightPanel">
+          <div className="content">
             <h3>Already have an account?</h3>
             <p>
               Login with your account here to communicate with your friends, people in NUS
             </p>
-            <button onClick={handleSign} class="btn transparent">
+            <button onClick={handleSign} className="btn transparent">
               Login
             </button>
           </div>
-          <Lpimgregister class="image" alt="" />
+          <Lpimgregister className="image" alt="" />
         </div>
       </div>
     </div>
